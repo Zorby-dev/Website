@@ -1,5 +1,6 @@
 * {
     font-family: 'Source Code Pro', monospace !important;
+    user-select: all !important;
 }
 
 span,code:focus-visible {
@@ -35,27 +36,39 @@ span,code:focus-visible {
 
 ::-webkit-scrollbar-track {
     background-color: var(--background);
+    width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--white);
-    width: 70%;
+    width: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    width: 100%;
+::-webkit-scrollbar-corner {
+    display: none;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+body {
+    background-color: var(--background);
 }
 
 #shell {
     position: absolute;
     overflow-y: scroll;
-    padding: 10px;
+    word-wrap: break-word;
+    margin: 10px;
+    margin-right: 2.5px;
+    padding-right: 7.5px;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
     color: var(--foreground);
-    background-color: var(--background);
+    background: transparent;
 }
 
 .black {
